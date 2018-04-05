@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:101"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:qdt="urn:un:unece:uncefact:data:Standard:QualifiedDataType:101"
+    xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21"
+    targetNamespace="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:101"
+    elementFormDefault="qualified"
+    version="101.0">
+  <xs:import namespace="urn:un:unece:uncefact:data:Standard:QualifiedDataType:101" schemaLocation="BPSMaster_1p0_urn_un_unece_uncefact_data_Standard_QualifiedDataType_101.xsd"/>
+  <xs:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21" schemaLocation="BPSMaster_1p0_urn_un_unece_uncefact_data_standard_UnqualifiedDataType_21.xsd"/>
+  <xs:complexType name="CrossBorderCustomsValuationType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Cross-Border Customs Valuation</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AddedAdjustmentAmount" type="udt:AmountType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Added Adjustment Amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DeductedAdjustmentAmount" type="udt:AmountType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Deducted Adjustment Amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AddedAdjustmentPercent" type="udt:PercentType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Added Adjustment Percent</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DeductedAdjustmentPercent" type="udt:PercentType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Deducted Adjustment Percent</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MethodCode" type="udt:CodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Method Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrossBorderRegulatoryProcedureType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Cross-Border Regulatory Procedure</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EntryCustomsOfficeSpecifiedLogisticsLocation" type="ram:LogisticsLocationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Entry Customs Office Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExitCustomsOfficeSpecifiedLogisticsLocation" type="ram:LogisticsLocationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Exit Customs Office Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ImportCustomsOfficeSpecifiedLogisticsLocation" type="ram:LogisticsLocationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Import Customs Office Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExportCustomsOfficeSpecifiedLogisticsLocation" type="ram:LogisticsLocationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Export Customs Office Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExchangedDeclarationType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Exchanged Declaration</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TypeCode" type="qdt:DocumentCodeType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Type Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ProcedureCode" type="udt:CodeType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Procedure Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CustomsValueSpecifiedAmount" type="udt:AmountType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Customs Value Amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="StatisticalValueSpecifiedAmount" type="udt:AmountType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Statistical Value Amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TotalInvoiceSpecifiedAmount" type="udt:AmountType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Total Invoice Amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CurrencyExchangeRate" type="udt:RateType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Currency Exchange Rate</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecificCircumstanceCode" type="udt:CodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Specific Circumstance Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DeclarantTradeParty" type="ram:TradePartyType">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="DeclarantAgentTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Declarant Agent</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SubmissionLogisticsLocation" type="ram:LogisticsLocationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Submission Logistics Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApplicableCrossBorderCustomsValuation" type="ram:CrossBorderCustomsValuationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Cross-Border Customs Valuation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreviousReferencedDocument" type="ram:ReferencedDocumentType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Previous Referenced Document</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PrincipalAssociatedTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Associated Principal Party</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AdditionalStatementNote" type="ram:NoteType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Additional Statement</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AssociatedReferencedDocument" type="ram:ReferencedDocumentType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Referenced Document</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExchangedDocumentType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Exchanged Document</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="IssueDateTime" type="udt:DateTimeType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Issue Date Time</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IssuerTradeParty" type="ram:TradePartyType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Issuer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GovernmentRegistrationType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Government Registration</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TypeCode" type="udt:CodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Type Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountryID" type="udt:IDType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Country Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ValiditySpecifiedPeriod" type="ram:SpecifiedPeriodType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Validity Period</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HeaderTradeAgreementType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Header Trade Agreement</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SellerTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Seller</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BuyerTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Buyer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SellerOrderReferencedDocument" type="ram:ReferencedDocumentType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Seller Order Document</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApplicableCrossBorderRegulatoryProcedure" type="ram:CrossBorderRegulatoryProcedureType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Cross Border Regulatory Procedure</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HeaderTradeDeliveryType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Header Trade Delivery</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="FormattedPickUpAvailabilityDateTime" type="qdt:FormattedDateTimeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Pick-Up Availability Date Time</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ShipToTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Ship To Party</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ShipFromTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Ship From Party</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ActualDespatchSupplyChainEvent" type="ram:SupplyChainEventType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Actual Despatch Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PlannedDeliverySupplyChainEvent" type="ram:SupplyChainEventType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Planned Delivery Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FinalDestinationTradeCountry" type="ram:TradeCountryType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Final Destination Country</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HeaderTradeSettlementType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Header Trade Settlement</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DuePayableAmount" type="udt:AmountType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Due Payable Amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="InvoiceReferencedDocument" type="ram:ReferencedDocumentType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Invoice Document</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LineTradeAgreementType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Line Trade Agreement</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="GrossPriceProductTradePrice" type="ram:TradePriceType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Product Gross Price</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LineTradeDeliveryType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Line Trade Delivery</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="NetWeightMeasure" type="qdt:WeightUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Net Weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GrossWeightMeasure" type="qdt:WeightUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Gross Weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GrossVolumeMeasure" type="qdt:VolumeUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Gross Volume</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedLogisticsPackage" type="ram:LogisticsPackageType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Logistics Package</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UtilizedReferencedLogisticsTransportEquipment" type="ram:ReferencedLogisticsTransportEquipmentType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Used Transport Equipment</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogisticsLocationType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Logistics Location</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Name" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountryName" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Country Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountryID" type="qdt:CountryIDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Country Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogisticsPackageType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Logistics Package</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ItemQuantity" type="udt:QuantityType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Item Quantity</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LevelCode" type="qdt:PackagingLevelCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Level Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TypeCode" type="qdt:PackageTypeCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Type Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Type" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Type Text</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PhysicalLogisticsShippingMarks" type="ram:LogisticsShippingMarksType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Shipping Marks</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogisticsRiskAnalysisResultType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Risk Analysis Indicators</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CategoryCode" type="udt:CodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Category Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportMovementRelatedCode" type="udt:CodeType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Transport Movement Related Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportEquipmentRelatedCode" type="udt:CodeType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Transport Equipment Related Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConsignmentRelatedCode" type="udt:CodeType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Consignment Related Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PartyRelatedCode" type="udt:CodeType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Party Related Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Description" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Description</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LevelCode" type="qdt:CommitmentLevelCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Level Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogisticsSealType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Logistics Seal</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConditionCode" type="qdt:SealConditionCodeType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Condition Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SealingPartyRoleCode" type="qdt:SealingPartyRoleCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Sealing Party Role Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogisticsShippingMarksType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Logistics Shipping Marks</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Marking" type="udt:TextType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Marking Text</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogisticsStatusType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Logistics Status</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ConditionCode" type="qdt:LogisticsStatusCodeType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Condition Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReferenceDateTime" type="udt:DateTimeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Reference Date Time</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReasonCode" type="qdt:LogisticsStatusCodeType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Reason Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogisticsTransportEquipmentType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Logistics Transport Equipment</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GrossWeightMeasure" type="qdt:WeightUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Gross Weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TareWeightMeasure" type="qdt:WeightUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Tare Weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CharacteristicCode" type="qdt:TransportEquipmentSizeTypeCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Size/Type Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UsedCapacityCode" type="qdt:TransportEquipmentFullnessCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Full/Empty Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OperationalStatusCode" type="qdt:TransportEquipmentOperationalStatusCodeType" minOccurs="0">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="AffixedLogisticsSeal" type="ram:LogisticsSealType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Affixed Seal</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReportedLogisticsStatus" type="ram:LogisticsStatusType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Reported Status</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogisticsTransportMeansType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Logistics Transport Means</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Name" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ISPSSecurityLevelCode" type="udt:CodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ISPS Security Level Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RegistrationTradeCountry" type="ram:TradeCountryType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Registration Country</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogisticsTransportMovementType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Logistics Transport Movement</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ModeCode" type="qdt:TransportModeCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Mode Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="StatusCode" type="qdt:StatusCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Status Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LoadingTransportEvent" type="ram:TransportEventType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Loading Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UnloadingTransportEvent" type="ram:TransportEventType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Unloading Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ArrivalTransportEvent" type="ram:TransportEventType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Arrival Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FirstArrivalTransportEvent" type="ram:TransportEventType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">First Arrival Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DepartureTransportEvent" type="ram:TransportEventType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Departure Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UsedLogisticsTransportMeans" type="ram:LogisticsTransportMeansType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Used Transport Means</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ItineraryTransportRoute" type="ram:TransportRouteType" minOccurs="0" maxOccurs="2">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Itinerary Route</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CallTransportEvent" type="ram:TransportEventType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Call Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedLogisticsRiskAnalysisResult" type="ram:LogisticsRiskAnalysisResultType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MeasurementType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Measurement</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ActualMeasure" type="udt:MeasureType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Actual Measure</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NoteType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Note</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Subject" type="udt:TextType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Subject Text</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Content" type="udt:TextType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Content Text</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProductClassificationType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Product Classification</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SystemID" type="udt:IDType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">System ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ClassCode" type="udt:CodeType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Class Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReferencedDocumentType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Referenced Document</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TypeCode" type="qdt:DocumentCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Type Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" type="udt:IDType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FormattedIssueDateTime" type="qdt:FormattedDateTimeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Formatted Issue Date Time</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReferencedLogisticsTransportEquipmentType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Referenced Logistics Transport Equipment</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReferencedSupplyChainConsignmentItemType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Referenced Supply Chain Consignment Item</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TradeLineItemQuantity" type="udt:QuantityType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Trade Line Item Quantity</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportLogisticsPackage" type="ram:LogisticsPackageType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Transport Package</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IncludedSupplyChainTradeLineItem" type="ram:SupplyChainTradeLineItemType" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Trade Line Item</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NatureIdentificationTransportCargo" type="ram:TransportCargoType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Cargo Nature Identification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PhysicalLogisticsShippingMarks" type="ram:LogisticsShippingMarksType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Shipping Marks</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AssociatedReferencedLogisticsTransportEquipment" type="ram:ReferencedLogisticsTransportEquipmentType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Associated Transport Equipment</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReferencedSupplyChainConsignmentType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Referenced Supply Chain Consignment</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GrossWeightMeasure" type="qdt:WeightUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Gross Weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NetWeightMeasure" type="qdt:WeightUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Net Weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GrossVolumeMeasure" type="qdt:VolumeUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Gross Volume</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConsignmentItemQuantity" type="udt:QuantityType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Consignment Item Quantity</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CarrierAcceptanceDateTime" type="qdt:FormattedDateTimeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Carrier Acceptance Date Time</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CustomsID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Customs ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IncludedReferencedSupplyChainConsignmentItem" type="ram:ReferencedSupplyChainConsignmentItemType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Included Consignment Item</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConsignorTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Consignor</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConsigneeTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Consignee</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DespatchTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Despatch Party</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DeliveryTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Delivery Party</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NotifiedTradeParty" type="ram:TradePartyType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Notified Party</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CarrierTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Carrier</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RelatedSupplyChainTradeTransaction" type="ram:SupplyChainTradeTransactionType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Trade Transaction</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportLogisticsPackage" type="ram:LogisticsPackageType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Transport Package</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="VanningTransportEvent" type="ram:TransportEventType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Vanning Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CarrierAcceptanceLogisticsLocation" type="ram:LogisticsLocationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Carrier Acceptance Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportContractReferencedDocument" type="ram:ReferencedDocumentType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Transport Contract Document</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PreCarriageLogisticsTransportMovement" type="ram:LogisticsTransportMovementType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Pre-Carriage Transport Movement</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UtilizedLogisticsTransportEquipment" type="ram:LogisticsTransportEquipmentType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Used Transport Equipment</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="WarehouseStorageTransportEvent" type="ram:TransportEventType" minOccurs="0" maxOccurs="2">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Warehouse Storage Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SpecifiedPeriodType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Period</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EndDateTime" type="udt:DateTimeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">End Date Time</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SupplyChainConsignmentItemType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Supply Chain Consignment Item</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SequenceNumeric" type="udt:NumericType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Sequence Number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TypeCode" type="qdt:GoodsTypeCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Goods Type Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GrossWeightMeasure" type="qdt:WeightUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Gross Weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NetWeightMeasure" type="udt:MeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Net Weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GrossVolumeMeasure" type="udt:MeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Gross Volume</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NatureIdentificationTransportCargo" type="ram:TransportCargoType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Cargo Nature Identification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PhysicalLogisticsShippingMarks" type="ram:LogisticsShippingMarksType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Shipping Marks</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportLogisticsPackage" type="ram:LogisticsPackageType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Transport Package</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SupplyChainConsignmentType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Supply Chain Consignment</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CarrierAcceptanceDateTime" type="udt:DateTimeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Carrier Acceptance Date Time</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GrossWeightMeasure" type="qdt:WeightUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Gross Weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NetWeightMeasure" type="udt:MeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Net Weight</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GrossVolumeMeasure" type="qdt:VolumeUnitMeasureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Gross Volume</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FOBAmount" type="udt:AmountType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">FOB Amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConsignmentItemQuantity" type="udt:QuantityType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Consignment Item Quantity</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PaymentArrangementCode" type="qdt:TransportServicePaymentArrangementCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Payment Arrangement Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConsignorTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Consignor</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConsigneeTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Consignee</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CarrierTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Carrier</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DespatchTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Despatch Party</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DeliveryTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Delivery Party</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NotifiedTradeParty" type="ram:TradePartyType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Notified Party</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CarrierAcceptanceLogisticsLocation" type="ram:LogisticsLocationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Carrier Acceptance Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConsigneeReceiptLogisticsLocation" type="ram:LogisticsLocationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Consignee Receipt Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportContractReferencedDocument" type="ram:ReferencedDocumentType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Transport Contract Document</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IncludedSupplyChainConsignmentItem" type="ram:SupplyChainConsignmentItemType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Included Consignment Item</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IncludedReferencedSupplyChainConsignment" type="ram:ReferencedSupplyChainConsignmentType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Included Consignment</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UtilizedLogisticsTransportEquipment" type="ram:LogisticsTransportEquipmentType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Used Transport Equipment</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FinalDestinationTradeCountry" type="ram:TradeCountryType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Final Destination Country</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExportTradeCountry" type="ram:TradeCountryType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Export Country</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApplicableCrossBorderRegulatoryProcedure" type="ram:CrossBorderRegulatoryProcedureType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Regulatory Procedure</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SupplyChainEventType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Supply Chain Event</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="OccurrenceLogisticsLocation" type="ram:LogisticsLocationType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SupplyChainTradeLineItemType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Supply Chain Trade Line Item</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SequenceNumeric" type="udt:NumericType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Sequence Number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedTradeProduct" type="ram:TradeProductType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Trade Product</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedLineTradeAgreement" type="ram:LineTradeAgreementType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Line Trade Agreement</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedLineTradeDelivery" type="ram:LineTradeDeliveryType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Line Trade Delivery</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SupplyChainTradeTransactionType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Supply Chain Trade Transaction</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LineItemQuantity" type="udt:QuantityType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Line Item Quantity</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApplicableHeaderTradeAgreement" type="ram:HeaderTradeAgreementType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Header Trade Agreement</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApplicableHeaderTradeDelivery" type="ram:HeaderTradeDeliveryType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Header Trade Delivery</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApplicableHeaderTradeSettlement" type="ram:HeaderTradeSettlementType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Header Trade Settlement</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TradeAddressType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Trade Address</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PostcodeCode" type="udt:CodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Postcode</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="StreetName" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Street Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CityName" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">City Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountryID" type="qdt:CountryIDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Country Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountrySubDivisionName" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Country Sub-Division Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TradeContactType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Trade Contact</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PersonName" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Person Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DepartmentName" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Department Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TelephoneUniversalCommunication" type="ram:UniversalCommunicationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Telephone</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EmailURIUniversalCommunication" type="ram:UniversalCommunicationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Email Address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TradeCountryType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Trade Country</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="qdt:CountryIDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Name" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TradePartyType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Trade Party</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Name" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RoleCode" type="qdt:PartyRoleCodeType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Role Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DefinedTradeContact" type="ram:TradeContactType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Defined Contact Details</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PostalTradeAddress" type="ram:TradeAddressType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Postal Address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TelephoneUniversalCommunication" type="ram:UniversalCommunicationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Telephone</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedGovernmentRegistration" type="ram:GovernmentRegistrationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Government Registration</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TradePriceType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Trade Price</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ChargeAmount" type="udt:AmountType">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Charge Amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TradeProductType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Trade Product</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Description" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Description</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ContentUnitQuantity" type="udt:QuantityType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Content Unit Quantity</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DesignatedProductClassification" type="ram:ProductClassificationType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Classification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OriginTradeCountry" type="ram:TradeCountryType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Origin Country</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ManufacturerTradeParty" type="ram:TradePartyType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Manufacturer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApplicableTransportDangerousGoods" type="ram:TransportDangerousGoodsType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Dangerous Goods</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransportCargoType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Transport Cargo</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Identification" type="udt:TextType" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Identification Text</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransportDangerousGoodsType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Transport Dangerous Goods</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="UNDGIdentificationCode" type="udt:CodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">UNDG ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RegulationCode" type="qdt:DangerousGoodsRegulationCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Regulation Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TechnicalName" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Technical Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PackagingDangerLevelCode" type="qdt:DangerousGoodsPackagingLevelCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Packaging Danger Level Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="HazardTypeCode" type="udt:CodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Hazard Type Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="HazardClassificationID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Hazard Classification ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AdditionalHazardClassificationID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Additional Hazard Classification ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LimitedQuantityCode" type="udt:CodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Limited Quantity Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FlashpointTemperatureMeasurement" type="ram:MeasurementType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Flashpoint Temperature</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransportEventType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Transport Event</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="TypeCode" type="udt:CodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Type Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EstimatedOccurrenceDateTime" type="udt:DateTimeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Estimated Occurrence Date Time</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ActualOccurrenceDateTime" type="udt:DateTimeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Actual Occurrence Date Time</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ScheduledOccurrenceDateTime" type="udt:DateTimeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Scheduled Occurrence Date Time</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OccurrenceLogisticsLocation" type="ram:LogisticsLocationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Occurrence Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransportRouteType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Transport Route</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="StatusCode" type="qdt:StatusCodeType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Status Code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ItineraryStopTransportEvent" type="ram:TransportEventType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Itinerary Stop Event</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UniversalCommunicationType">
+    <xs:annotation>
+      <xs:documentation source="BN/BN">Communication</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="URIID" type="udt:IDType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">URI</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CompleteNumber" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation source="BN/BN">Complete Number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
