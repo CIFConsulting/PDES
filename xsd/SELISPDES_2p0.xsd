@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:rsm="urn:un:unece:uncefact:data:standard:SELISPDES:2"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:qdt="urn:un:unece:uncefact:data:Standard:QualifiedDataType:101"
+    xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:101"
+    xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21"
+    xmlns:gefeg="http://www.gefeg.com/public"
+    targetNamespace="urn:un:unece:uncefact:data:standard:SELISPDES:2"
+    elementFormDefault="qualified"
+    version="2.0">
+  <xsd:import namespace="urn:un:unece:uncefact:data:Standard:QualifiedDataType:101" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_data_Standard_QualifiedDataType_101.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:101" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_data_standard_ReusableAggregateBusinessInformationEntity_101.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_data_standard_UnqualifiedDataType_21.xsd"/>
+  <xsd:element name="SELISPDES" type="rsm:SELISPDESType"/>
+  <xsd:complexType name="SELISPDESType">
+    <xsd:annotation>
+      <xsd:documentation gefeg:label="BN/BN">SELIS PDES Master</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ExchangedDocument" type="ram:ExchangedDocumentType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation gefeg:label="BN/BN">Exchanged Document</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ExchangedDeclaration" type="ram:ExchangedDeclarationType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation gefeg:label="BN/BN">Waypoint Data</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SpecifiedLogisticsTransportMovement" type="ram:LogisticsTransportMovementType" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation gefeg:label="BN/BN">Border Transport Movement</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SpecifiedSupplyChainConsignment" type="ram:SupplyChainConsignmentType">
+        <xsd:annotation>
+          <xsd:documentation gefeg:label="BN/BN">Master Consignment</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:qdt="urn:un:unece:uncefact:data:Standard:QualifiedDataType:101"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:clm68273="urn:un:unece:uncefact:codelist:standard:UNECE:DangerousGoodsRegulationCode:D16B"
+    xmlns:clm61001="urn:un:unece:uncefact:codelist:standard:UNECE:DocumentNameCode:D16B"
+    xmlns:clm68155="urn:un:unece:uncefact:codelist:standard:UNECE:EquipmentSizeTypeDescriptionCode:D16B"
+    xmlns:clm6TDED7357="urn:un:unece:uncefact:codelist:standard:UNECE:GoodsTypeCode:D16B"
+    xmlns:clm6Recommendation20Volume="urn:un:unece:uncefact:codelist:standard:UNECE:MeasurementUnitCommonCodeVolume:4"
+    xmlns:clm6Recommendation20Weight="urn:un:unece:uncefact:codelist:standard:UNECE:MeasurementUnitCommonCodeWeight:4"
+    xmlns:clm67065="urn:un:unece:uncefact:codelist:standard:UNECE:PackageTypeCode:2006"
+    xmlns:clm67075="urn:un:unece:uncefact:codelist:standard:UNECE:PackagingLevelCode:D16B"
+    xmlns:clm63035="urn:un:unece:uncefact:codelist:standard:UNECE:PartyRoleCode:D16B"
+    xmlns:clm64517="urn:un:unece:uncefact:codelist:standard:UNECE:SealConditionCode:D16B"
+    xmlns:clm69303="urn:un:unece:uncefact:codelist:standard:UNECE:SealingPartyRoleCode:D16B"
+    xmlns:clm64405="urn:un:unece:uncefact:codelist:standard:UNECE:StatusCode:D16B"
+    xmlns:clm62379="urn:un:unece:uncefact:codelist:standard:UNECE:TimePointFormatCode:D16B"
+    xmlns:clm68053="urn:un:unece:uncefact:codelist:standard:UNECE:TransportEquipmentCategoryCode:D16B"
+    xmlns:clm68169="urn:un:unece:uncefact:codelist:standard:UNECE:TransportEquipmentFullnessCode:D16B"
+    xmlns:clm6Recommendation19="urn:un:unece:uncefact:codelist:standard:UNECE:TransportModeCode:2"
+    xmlns:clm64237TransportPaymentArrangementCode="urn:un:unece:uncefact:codelist:standard:UNECE:TransportPaymentArrangementCode:D16B"
+    xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21"
+    xmlns:ids5ISO316612A="urn:un:unece:uncefact:identifierlist:standard:ISO:ISOTwo-letterCountryCode:SecondEdition2006"
+    xmlns:gefeg="http://www.gefeg.com/public"
+    targetNamespace="urn:un:unece:uncefact:data:Standard:QualifiedDataType:101"
+    elementFormDefault="qualified"
+    version="101.0">
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:DangerousGoodsRegulationCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_DangerousGoodsRegulationCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:DocumentNameCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_DocumentNameCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:EquipmentSizeTypeDescriptionCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_EquipmentSizeTypeDescriptionCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:GoodsTypeCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_GoodsTypeCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:MeasurementUnitCommonCodeVolume:4" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_MeasurementUnitCommonCodeVolume_4.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:MeasurementUnitCommonCodeWeight:4" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_MeasurementUnitCommonCodeWeight_4.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:PackageTypeCode:2006" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_PackageTypeCode_2006.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:PackagingLevelCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_PackagingLevelCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:PartyRoleCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_PartyRoleCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:SealConditionCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_SealConditionCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:SealingPartyRoleCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_SealingPartyRoleCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:StatusCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_StatusCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:TimePointFormatCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_TimePointFormatCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:TransportEquipmentCategoryCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_TransportEquipmentCategoryCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:TransportEquipmentFullnessCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_TransportEquipmentFullnessCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:TransportModeCode:2" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_TransportModeCode_2.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:TransportPaymentArrangementCode:D16B" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_codelist_standard_UNECE_TransportPaymentArrangementCode_D16B.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_data_standard_UnqualifiedDataType_21.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:identifierlist:standard:ISO:ISOTwo-letterCountryCode:SecondEdition2006" schemaLocation="SELISPDES_2p0_urn_un_unece_uncefact_identifierlist_standard_ISO_ISOTwo-letterCountryCode_SecondEdition2006.xsd"/>
+  <xsd:simpleType name="CountryIDSchemeAgencyIDContentType">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="5"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="CountryIDType">
+    <xsd:simpleContent>
+      <xsd:extension base="ids5ISO316612A:ISOTwoletterCountryCodeContentType">
+        <xsd:attribute name="schemeID" type="xsd:token"/>
+        <xsd:attribute name="schemeAgencyID" type="qdt:CountryIDSchemeAgencyIDContentType"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="DangerousGoodsRegulationCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm68273:DangerousGoodsRegulationCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="DocumentCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm61001:DocumentNameCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="FormattedDateTimeType">
+    <xsd:sequence>
+      <xsd:element name="DateTimeString">
+        <xsd:complexType>
+          <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+              <xsd:attribute name="format" type="clm62379:TimePointFormatCodeContentType" use="optional"/>
+            </xsd:extension>
+          </xsd:simpleContent>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GoodsTypeCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm6TDED7357:GoodsTypeCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PackageTypeCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm67065:PackageTypeCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PackagingLevelCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm67075:PackagingLevelCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PartyRoleCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm63035:PartyRoleCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="SealConditionCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm64517:SealConditionCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="SealingPartyRoleCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm69303:SealingPartyRoleCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="StatusCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm64405:StatusCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="TransportEquipmentCategoryCodeListAgencyIDContentType">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="6"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TransportEquipmentCategoryCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm68053:TransportEquipmentCategoryCodeContentType">
+        <xsd:attribute name="listAgencyID" type="qdt:TransportEquipmentCategoryCodeListAgencyIDContentType" fixed="6"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="TransportEquipmentFullnessCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm68169:TransportEquipmentFullnessCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="TransportEquipmentSizeTypeCodeListAgencyIDContentType">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="6"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TransportEquipmentSizeTypeCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm68155:EquipmentSizeTypeDescriptionCodeContentType">
+        <xsd:attribute name="listAgencyID" type="qdt:TransportEquipmentSizeTypeCodeListAgencyIDContentType" fixed="6"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="TransportModeCodeListAgencyIDContentType">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="6"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TransportModeCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm6Recommendation19:TransportModeCodeContentType">
+        <xsd:attribute name="listAgencyID" type="qdt:TransportModeCodeListAgencyIDContentType" fixed="6"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="TransportServicePaymentArrangementCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="clm64237TransportPaymentArrangementCode:TransportPaymentArrangementCodeContentType"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="UnitMeasureType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:decimal">
+        <xsd:attribute name="unitCode" type="xsd:token" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="VolumeUnitMeasureType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:decimal">
+        <xsd:attribute name="unitCode" type="clm6Recommendation20Volume:MeasurementUnitCommonCodeVolumeContentType" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="WeightUnitMeasureType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:decimal">
+        <xsd:attribute name="unitCode" type="clm6Recommendation20Weight:MeasurementUnitCommonCodeWeightContentType" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+</xsd:schema>

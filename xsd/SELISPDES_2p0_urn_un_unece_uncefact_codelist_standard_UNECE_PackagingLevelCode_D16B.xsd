@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:clm67075="urn:un:unece:uncefact:codelist:standard:UNECE:PackagingLevelCode:D16B"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:gefeg="http://www.gefeg.com/public"
+    targetNamespace="urn:un:unece:uncefact:codelist:standard:UNECE:PackagingLevelCode:D16B"
+    elementFormDefault="qualified"
+    version="1.1">
+  <xsd:simpleType name="PackagingLevelCodeContentType">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="1"/>
+      <xsd:enumeration value="2"/>
+      <xsd:enumeration value="3"/>
+      <xsd:enumeration value="4"/>
+      <xsd:enumeration value="5"/>
+      <xsd:enumeration value="6"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

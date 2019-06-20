@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:clm6TDED7357="urn:un:unece:uncefact:codelist:standard:UNECE:GoodsTypeCode:D16B"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:gefeg="http://www.gefeg.com/public"
+    targetNamespace="urn:un:unece:uncefact:codelist:standard:UNECE:GoodsTypeCode:D16B"
+    elementFormDefault="qualified"
+    version="1.1">
+  <xsd:simpleType name="GoodsTypeCodeContentType">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="ZZZ"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
